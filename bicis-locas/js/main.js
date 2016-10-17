@@ -11,4 +11,10 @@ function validateForm(){
 	if (camposSeleccion == null || camposSeleccion == 0){
 		alert("Necesitas elegir alguna opción de bicicleta");
 	}
+	campoPassword = document.getElementById("input-password").value;
+	if (campoPassword < 6){
+		alert("La contraseña debe ser de minimo 6 caracteres")
+	}else if (campoPassword == "password" || campoPassword == "123456" || campoPassword == "098765"){
+		alert("La contraseña debe ser deiferente")
+	}
 }
