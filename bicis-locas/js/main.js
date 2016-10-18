@@ -11,10 +11,16 @@ function validateForm(){
 	if (camposSeleccion == null || camposSeleccion == 0){
 		alert("Necesitas elegir alguna opción de bicicleta");
 	}
+	if (!(/^[A-Z][a-zA-Z]*$/.test (nombre))){
+		alert("El nombre debe iniciar con mayuscula");
+	}
+	if (!(/^[A-Z][a-zA-Z]*$/.test (apellido))){
+		alert("El apellido debe iniciar con mayuscula");
+	}
 	campoPassword = document.getElementById("input-password").value;
 	if (campoPassword < 6){
 		alert("La contraseña debe ser de minimo 6 caracteres")
 	}else if (campoPassword == "password" || campoPassword == "123456" || campoPassword == "098765"){
-		alert("La contraseña debe ser deiferente")
+		alert("La contraseña debe ser DIFERENTE")
 	}
 }
